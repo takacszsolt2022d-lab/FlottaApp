@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FlottaApp
 {
-    internal class Jarmu
+    public class Jarmu
     {
 
         public string Rendszam { get; set; }
@@ -27,10 +27,10 @@ namespace FlottaApp
 
         public static int OsszesJarmuSzama { get; }
 
-        public Jarmu(string rendszam,int alapa)
+        public Jarmu(string rendszam,int alapar)
         {
             Rendszam = rendszam;
-            alapar = alapa;
+            Alapar = alapar;
             osszesJarmuSzama++;
         }
         public virtual int Adokalkulacio()
