@@ -18,7 +18,7 @@ namespace FlottaApp
         }
         public override string ToString()
         {
-            return base.ToString() + $"| Teherbírás: {Teherbiras} t" ;
+            return $" {base.ToString()}  | Teherbírás: {Teherbiras} t" ;
         }
     }
 }
