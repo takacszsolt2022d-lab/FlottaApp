@@ -20,5 +20,7 @@ namespace FlottaApp
         {
             return $" {base.ToString()}  | Teherbírás: {Teherbiras} t" ;
         }
+
+        
     }
 }

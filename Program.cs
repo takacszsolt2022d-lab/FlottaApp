@@ -1,4 +1,5 @@
 ﻿using FlottaApp;
+using System.IO;
 
 
 List<Jarmu> jarmuvek = new List<Jarmu>();
@@ -35,4 +36,18 @@ foreach (string sor in File.ReadAllLines("jarmuvek.csv").Skip(1))
         hibassrorkSzama++;
         continue;
     }
+    if(tipus == "J")
+    {
+        Jarmu jarmu = new Jarmu(rendszam, alapar);
+        jarmuvek.Add(jarmu);
+    }
+    if(tipus == "T")
+    {
+        Teherauto jarmu = new Teherauto(rendszam, alapar, teherbiras);
+        jarmuvek.Add(jarmu);
+    }
+
+
+    Console.WriteLine(hibassrorkSzama);
+    Console.WriteLine(jarmuvek);
  }
