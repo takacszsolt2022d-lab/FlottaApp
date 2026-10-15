@@ -18,7 +18,7 @@ namespace FlottaApp
             {
                 if (value <= 0)
                 {
-                    value=1000000;
+                    alapar=1000000;
                 }
                 
             }
@@ -33,6 +33,16 @@ namespace FlottaApp
             alapar = alapa;
             osszesJarmuSzama++;
         }
+        public virtual int Adokalkulacio()
+        {
+            return (alapar/100)*5;
+        }
+
+        public override string ToString()
+        {
+            return $"Jármű {Rendszam} | Alapár: {Alapar} Ft | Adó:{Adokalkulacio()} Ft";
+        }
+
 
     }
 }
